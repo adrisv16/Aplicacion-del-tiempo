@@ -1,0 +1,106 @@
+:root {
+  --dark-bg: #151E26;
+  --blue-soft: #688EA6;
+  --yellow-main: #F2CB07;
+  --cream-text: #F2EBDF;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--cream-text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.search-form {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--blue-soft);
+  color: var(--cream-text);
+  padding: 15px;
+  font-size: 1.2rem;
+  outline: none;
+  transition: border-color 0.3s;
+  letter-spacing: 2px;
+}
+
+.search-input:focus {
+  border-color: var(--yellow-main);
+}
+
+/* Tarjeta de Clima */
+.weather-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(104, 142, 166, 0.1);
+  border-radius: 40px;
+  padding: 50px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.temp-main {
+  font-size: 7rem;
+  font-weight: 100;
+  color: var(--yellow-main);
+  margin: 20px 0;
+}
+
+.city-name {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--cream-text);
+}
+
+.details-btn {
+  margin-top: 30px;
+  background: transparent;
+  border: 1px solid var(--yellow-main);
+  color: var(--yellow-main);
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.details-btn:hover {
+  background: var(--yellow-main);
+  color: var(--dark-bg);
+}
+
+.scroll-minimal::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scroll-minimal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.scroll-minimal::-webkit-scrollbar-thumb {
+  background: var(--blue-soft);
+  border-radius: 10px;
+}
+
+.scroll-minimal {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-soft) transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
